@@ -15,6 +15,7 @@
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="ppe.html" class="nav-link">PPE</a>
                 <a href="stage.html" class="nav-link">Stage</a>
+                <a href="veille.html" class="nav-link">Veille</a>
                 <a href="certifications.html" class="nav-link active">Certifications</a>
             </div>
         </div>
@@ -22,47 +23,179 @@
 
     <main class="main">
         <h2 class="section-title">Certifications & Formations complémentaires</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-light);">Attestations obtenues pour valider et enrichir mes compétences.</p>
+        <p style="margin-bottom: 2rem; color: var(--text-light);">Cliquez sur une certification pour découvrir les détails.</p>
         
         <div class="cert-list">
-            <div class="cert-item" style="--index:0;">
+            <!-- Certification 1 -->
+            <div class="cert-item" data-modal="cert1" style="cursor: pointer; --index:0;">
                 <div class="cert-icon">📜</div>
                 <div class="cert-content">
-                    <h3>Certification RGPD – CNIL</h3>
-                    <div class="issuer">CNIL · 2025</div>
-                    <p>Module de sensibilisation à la protection des données personnelles.</p>
+                    <h3>Adoptez une architecture MVC en PHP</h3>
+                    <div class="issuer">OpenClassrooms · 2025</div>
                 </div>
             </div>
-            <div class="cert-item" style="--index:1;">
+            <!-- Certification 2 -->
+            <div class="cert-item" data-modal="cert2" style="cursor: pointer; --index:1;">
                 <div class="cert-icon">🌐</div>
                 <div class="cert-content">
-                    <h3>Responsive Web Design</h3>
-                    <div class="issuer">freeCodeCamp · 2024</div>
-                    <p>300 heures de projets pratiques (HTML, CSS, Flexbox, Grid).</p>
+                    <h3>Apprendre à programmer en C++</h3>
+                    <div class="issuer">OpenClassrooms · 2025</div>
                 </div>
             </div>
-            <div class="cert-item" style="--index:2;">
+            <!-- Certification 3 -->
+            <div class="cert-item" data-modal="cert3" style="cursor: pointer; --index:2;">
                 <div class="cert-icon">🐍</div>
                 <div class="cert-content">
-                    <h3>Python pour tous</h3>
-                    <div class="issuer">Coursera (University of Michigan) · 2024</div>
-                    <p>Bases de la programmation Python, structures de données.</p>
+                    <h3>Apprenez à programmer en C#</h3>
+                    <div class="issuer">Openclassrooms · 2025</div>
                 </div>
             </div>
-            <div class="cert-item" style="--index:3;">
+            <!-- Certification 4 -->
+            <div class="cert-item" data-modal="cert4" style="cursor: pointer; --index:3;">
                 <div class="cert-icon">☁️</div>
                 <div class="cert-content">
-                    <h3>AWS Cloud Practitioner Essentials</h3>
-                    <div class="issuer">Amazon Web Services · 2025</div>
-                    <p>Concepts fondamentaux du cloud AWS.</p>
+                    <h3>Concevez votre site web avec PHP et MySQL</h3>
+                    <div class="issuer">OpenClassrooms · 2025</div>
                 </div>
             </div>
-            <div class="cert-item" style="--index:4;">
+            <!-- Certification 5 -->
+            <div class="cert-item" data-modal="cert5" style="cursor: pointer; --index:4;">
                 <div class="cert-icon">🔐</div>
                 <div class="cert-content">
-                    <h3>Introduction à la Cybersécurité</h3>
-                    <div class="issuer">Cisco Networking Academy · 2025</div>
-                    <p>Notions de base en sécurité des réseaux et des systèmes.</p>
+                    <h3>Développer votre première application Android</h3>
+                    <div class="issuer">OpenClassrooms · 2025</div>
+                </div>
+            </div>
+            <!-- Certification 6 -->
+            <div class="cert-item" data-modal="cert6" style="cursor: pointer; --index:5;">
+                <div class="cert-icon">☁️</div>
+                <div class="cert-content">
+                    <h3>Gérer du code avec GIT et GITHUB</h3>
+                    <div class="issuer">OpenClassrooms · 2025</div>
+                </div>
+            </div>
+            <!-- Certification 7 -->
+            <div class="cert-item" data-modal="cert7" style="cursor: pointer; --index:6;">
+                <div class="cert-icon">☁️</div>
+                <div class="cert-content">
+                    <h3>Initiez-vous à Kotlin</h3>
+                    <div class="issuer">OpenClassrooms · 2025</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MODALES ========== -->
+        <div id="modal-container">
+            <!-- Modale cert1 -->
+            <div class="modal" id="cert1">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>📜 Adoptez une architecture MVC en PHP</h2>
+                        <div class="meta">OpenClassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Structurer une application web PHP avec le pattern Modèle-Vue-Contrôleur.</p>
+                        <p><strong>Contenu :</strong> Séparation des responsabilités, routage, templating, interactions avec une base de données MySQL.</p>
+                        <p><strong>Projet final :</strong> Création d’un mini-blog avec espace d’administration.</p>
+                        <p><strong>Compétences visées :</strong> PHP orienté objet, PDO, architecture logicielle, sécurité de base.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modale cert2 -->
+            <div class="modal" id="cert2">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>🌐 Apprendre à programmer en C++</h2>
+                        <div class="meta">OpenClassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Acquérir les fondamentaux du langage C++ moderne.</p>
+                        <p><strong>Contenu :</strong> Variables, boucles, fonctions, classes, héritage, polymorphisme, gestion de la mémoire.</p>
+                        <p><strong>Projet final :</strong> Développement d’un petit jeu console (Zork-like).</p>
+                        <p><strong>Compétences visées :</strong> Programmation orientée objet, compilation, debug, STL.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modale cert3 -->
+            <div class="modal" id="cert3">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>🐍 Apprenez à programmer en C#</h2>
+                        <div class="meta">Openclassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Maîtriser les bases de C# et de la plateforme .NET.</p>
+                        <p><strong>Contenu :</strong> Syntaxe, types, LINQ, programmation événementielle, Windows Forms.</p>
+                        <p><strong>Projet final :</strong> Application de gestion de contacts avec interface graphique.</p>
+                        <p><strong>Compétences visées :</strong> C#, .NET, Visual Studio, conception d’IHM.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modale cert4 -->
+            <div class="modal" id="cert4">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>☁️ Concevez votre site web avec PHP et MySQL</h2>
+                        <div class="meta">OpenClassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Créer un site dynamique de A à Z avec PHP et MySQL.</p>
+                        <p><strong>Contenu :</strong> Création de base de données, requêtes SQL, sessions, formulaires sécurisés, upload de fichiers.</p>
+                        <p><strong>Projet final :</strong> Site de petites annonces avec espace membre.</p>
+                        <p><strong>Compétences visées :</strong> PHP procédural, MySQL, HTML/CSS, sécurité web.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modale cert5 -->
+            <div class="modal" id="cert5">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>🔐 Développer votre première application Android</h2>
+                        <div class="meta">OpenClassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Comprendre les fondamentaux du développement mobile Android.</p>
+                        <p><strong>Contenu :</strong> Activités, intents, layouts, ressources, persistance avec SQLite.</p>
+                        <p><strong>Projet final :</strong> Application de liste de tâches (todo list) avec deux écrans.</p>
+                        <p><strong>Compétences visées :</strong> Java/Kotlin, Android Studio, cycle de vie, UX mobile.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modale cert6 -->
+            <div class="modal" id="cert6">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>☁️ Gérer du code avec GIT et GITHUB</h2>
+                        <div class="meta">OpenClassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Utiliser Git pour le versionnement de code et collaborer via GitHub.</p>
+                        <p><strong>Contenu :</strong> Commits, branches, merge, pull requests, résolution de conflits.</p>
+                        <p><strong>Projet final :</strong> Participation simulée à un projet open source sur GitHub.</p>
+                        <p><strong>Compétences visées :</strong> Git, GitHub, travail collaboratif, intégration continue.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modale cert7 -->
+            <div class="modal" id="cert7">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>☁️ Initiez-vous à Kotlin</h2>
+                        <div class="meta">OpenClassrooms · 2025</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Découvrir le langage Kotlin, de plus en plus utilisé sur Android et côté serveur.</p>
+                        <p><strong>Contenu :</strong> Syntaxe concise, null safety, extensions, coroutines (introduction).</p>
+                        <p><strong>Projet final :</strong> Petit programme console de gestion de contacts.</p>
+                        <p><strong>Compétences visées :</strong> Kotlin, programmation fonctionnelle, interopérabilité Java.</p>
+                    </div>
                 </div>
             </div>
         </div>

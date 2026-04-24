@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    // Animation des cartes au défilement (Intersection Observer)
+    // ---- Animation des cartes et éléments au défilement ----
     const animatedElements = document.querySelectorAll('.card, .cert-item, .profile-card');
     
     const observer = new IntersectionObserver((entries) => {
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                // Ajouter un petit délai progressif si désiré
             }
         });
     }, { threshold: 0.1 });
@@ -23,26 +22,75 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Effet de survol subtil sur les liens de navigation
+    // ---- Effet de survol subtil sur les liens de navigation ----
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        link.addEventListener('mouseenter', (e) => {
+        link.addEventListener('mouseenter', () => {
             if (!link.classList.contains('active')) {
                 link.style.transform = 'translateY(-2px)';
             }
         });
-        link.addEventListener('mouseleave', (e) => {
+        link.addEventListener('mouseleave', () => {
             link.style.transform = 'translateY(0)';
         });
     });
 
-    // Ajout d'une classe 'scrolled' à la navbar si besoin (optionnel)
+    // ---- Ombre dynamique sur la navbar au scroll ----
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 10) {
             navbar.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
         } else {
             navbar.style.boxShadow = 'var(--shadow)';
+        }
+    });
+
+    // ============ GESTION DES MODALES (PPE) ============
+    const modalTriggers = document.querySelectorAll('[data-modal]');
+    const body = document.body;
+
+    // Ouvrir la modale correspondante
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            // On empêche la propagation pour ne pas déclencher d'autres écouteurs éventuels
+            e.stopPropagation();
+            const modalId = trigger.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                // Fermer toute modale déjà ouverte avant d'ouvrir celle-ci
+                const previouslyActive = document.querySelector('.modal.active');
+                if (previouslyActive && previouslyActive !== modal) {
+                    previouslyActive.classList.remove('active');
+                }
+                modal.classList.add('active');
+                body.style.overflow = 'hidden'; // empêche le scroll de fond
+            }
+        });
+    });
+
+    // Fermer les modales (clic sur la croix ou en dehors du contenu)
+    const modalContainer = document.getElementById('modal-container');
+    if (modalContainer) {
+        modalContainer.addEventListener('click', (e) => {
+            // Si on clique directement sur le fond (modal) ou sur la croix (modal-close)
+            if (e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+                const activeModal = document.querySelector('.modal.active');
+                if (activeModal) {
+                    activeModal.classList.remove('active');
+                    body.style.overflow = ''; // restaure le scroll
+                }
+            }
+        });
+    }
+
+    // Fermer avec la touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const activeModal = document.querySelector('.modal.active');
+            if (activeModal) {
+                activeModal.classList.remove('active');
+                body.style.overflow = '';
+            }
         }
     });
 });

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">N. BERTRAND</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="ppe.html" class="nav-link">PPE</a>
+                <a href="stage.html" class="nav-link">Stage</a>
+                <a href="veille.html" class="nav-link active">Veille</a>
+                <a href="certifications.html" class="nav-link">Certifications</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- En-tête de la veille -->
+        <div class="profile-card" style="margin-bottom: 2rem;">
+            <div class="profile-info" style="flex: 1;">
+                <h1 style="font-size: 2.2rem;">Veille Technologique</h1>
+                <div class="subtitle">Thème : L'intelligence artificielle dans le jeu vidéo</div>
+                <p>
+                    Passionné par la création de mondes interactifs, je souhaite devenir développeur de jeux vidéo. 
+                    Cette veille explore comment l'IA transforme le game design : comportements des PNJ, génération procédurale, 
+                    adaptation dynamique de la difficulté et narration interactive. 
+                    Je m'informe pour anticiper les compétences nécessaires à mon futur métier.
+                </p>
+            </div>
+        </div>
+
+        <!-- Outils et méthodologie -->
+        <h2 class="section-title">Outils & Méthodologie</h2>
+        <div class="cards-grid" style="margin-bottom: 2.5rem;">
+            <div class="card" style="--index:0;">
+                <div class="card-icon">🔔</div>
+                <h3>Alertes & flux</h3>
+                <p>
+                    Google Alertes configuré avec les mots‑clés : 
+                    <em>“IA jeu vidéo”</em>, <em>“NPC AI”</em>, <em>“procédural generation”</em>, <em>“game AI behavior”</em>. 
+                    Suivi quotidien.
+                </p>
+                <span class="tech-badge">Google Alerts</span>
+            </div>
+            <div class="card" style="--index:1;">
+                <div class="card-icon">📰</div>
+                <h3>Agrégateur RSS</h3>
+                <p>
+                    Feedly avec des sources spécialisées : <em>Gamasutra</em>, <em>Game Developer</em>, 
+                    <em>AI and Games (YouTube)</em>, <em>ArXiv</em> (section AI). 
+                </p>
+                <span class="tech-badge">Feedly</span>
+                <span class="tech-badge">Inoreader</span>
+            </div>
+            <div class="card" style="--index:2;">
+                <div class="card-icon">🐦</div>
+                <h3>Réseaux sociaux</h3>
+                <p>
+                    Suivi de chercheurs et studios : <em>@ai_and_games</em>, <em>@UnrealEngine</em>, 
+                    <em>@unity3d</em>, <em>@DeepMind</em>. Listes Twitter/X dédiées.
+                </p>
+                <span class="tech-badge">Twitter/X</span>
+                <span class="tech-badge">LinkedIn</span>
+            </div>
+            <div class="card" style="--index:3;">
+                <div class="card-icon">📋</div>
+                <h3>Gestion des informations</h3>
+                <p>
+                    Notion pour centraliser les articles, les vidéos, les GDC talks. 
+                    Chaque ressource est taguée (PNJ, procédural, narration) et résumée.
+                </p>
+                <span class="tech-badge">Notion</span>
+            </div>
+        </div>
+
+        <!-- Articles marquants -->
+        <h2 class="section-title">Ressources récentes</h2>
+        <div class="cards-grid">
+            <div class="card" style="--index:0;">
+                <div class="meta">📅 Mars 2025 · Game Developer</div>
+                <h3>Les PNJ pilotés par LLM dans les RPG</h3>
+                <p>
+                    Analyse des prototypes utilisant de grands modèles de langage pour générer 
+                    des dialogues réalistes et des quêtes dynamiques. Exemples avec Inworld AI et NVIDIA ACE.
+                </p>
+                <a href="#" style="color: var(--primary-dark); text-decoration: underline;">Lire l'article →</a>
+            </div>
+            <div class="card" style="--index:1;">
+                <div class="meta">📅 Février 2025 · AI and Games (YouTube)</div>
+                <h3>Génération procédurale de niveaux avec Wave Function Collapse</h3>
+                <p>
+                    Tutoriel sur l'algorithme WFC pour créer des environnements cohérents 
+                    dans Unity et Unreal Engine. Exemple pratique avec un dungeon crawler.
+                </p>
+                <a href="#" style="color: var(--primary-dark); text-decoration: underline;">Voir la vidéo →</a>
+            </div>
+            <div class="card" style="--index:2;">
+                <div class="meta">📅 Janvier 2025 · ArXiv</div>
+                <h3>Adaptation dynamique de la difficulté par renforcement</h3>
+                <p>
+                    Nouvel article présentant un agent RL qui ajuste le comportement des ennemis 
+                    en fonction du niveau du joueur, sans script prédéfini.
+                </p>
+                <a href="#" style="color: var(--primary-dark); text-decoration: underline;">Lire l'article →</a>
+            </div>
+            <div class="card" style="--index:3;">
+                <div class="meta">📅 Décembre 2024 · Unreal Engine Blog</div>
+                <h3>Mass AI : gérer des milliers d'entités avec ECS</h3>
+                <p>
+                    Retour d'expérience sur la création de foules intelligentes dans 
+                    un jeu de stratégie, en utilisant le système Entity Component System.
+                </p>
+                <a href="#" style="color: var(--primary-dark); text-decoration: underline;">Lire l'article →</a>
+            </div>
+        </div>
+
+        <!-- Synthèse et bilan -->
+        <div style="margin-top: 3rem;">
+            <h2 class="section-title">Synthèse personnelle</h2>
+            <div class="card">
+                <p>
+                    L'IA dans le jeu vidéo ne se limite plus aux arbres de comportement classiques. 
+                    Les modèles génératifs, l'apprentissage par renforcement et les LLM ouvrent des 
+                    possibilités inédites pour créer des expériences plus immersives et réactives. 
+                    Cette veille m'a convaincu de l'importance de maîtriser ces technologies pour 
+                    mon projet professionnel de développeur de jeux. Je compte approfondir ces sujets 
+                    en stage et lors de futurs projets personnels.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Noah Bertrand – Portfolio BTS SIO</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

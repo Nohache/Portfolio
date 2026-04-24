@@ -15,62 +15,185 @@
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="ppe.html" class="nav-link active">PPE</a>
                 <a href="stage.html" class="nav-link">Stage</a>
+                <a href="veille.html" class="nav-link">Veille</a>
                 <a href="certifications.html" class="nav-link">Certifications</a>
             </div>
         </div>
     </nav>
 
     <main class="main">
-        <h2 class="section-title">Projets Professionnels Encadrés (PPE)</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-light);">Réalisations menées dans le cadre du BTS SIO, mobilisant les compétences acquises en développement et gestion de projet.</p>
+        <h2 class="section-title">Projets Professionnels Encadrés</h2>
+        <!-- Aucun texte supplémentaire, directement les cartes -->
         
         <div class="cards-grid">
-            <div class="card" style="--index:0;">
+            <!-- Carte 1 -->
+            <div class="card" data-modal="ppe1" style="cursor: pointer; --index:0;">
                 <div class="card-icon">📋</div>
                 <h3>Application de gestion de bibliothèque</h3>
                 <div class="meta">📅 Janvier – Avril 2025 · Projet scolaire</div>
-                <p>Développement d'une application web complète pour la gestion des emprunts et du catalogue. Interface administrateur et utilisateur.</p>
+                <p>Développement d'une application web complète pour la gestion des emprunts et du catalogue...</p>
                 <div>
                     <span class="tech-badge">PHP</span>
                     <span class="tech-badge">MySQL</span>
                     <span class="tech-badge">HTML/CSS</span>
-                    <span class="tech-badge">Bootstrap</span>
                 </div>
             </div>
-            <div class="card" style="--index:1;">
+
+            <!-- Carte 2 -->
+            <div class="card" data-modal="ppe2" style="cursor: pointer; --index:1;">
                 <div class="card-icon">📊</div>
                 <h3>Tableau de bord pour une PME</h3>
                 <div class="meta">📅 Octobre – Décembre 2024 · En équipe (3 personnes)</div>
-                <p>Création d'un outil de suivi d'activité avec visualisation de données (KPI, graphiques). Backend en Node.js, frontend React.</p>
+                <p>Création d'un outil de suivi d'activité avec visualisation de données (KPI, graphiques)...</p>
                 <div>
                     <span class="tech-badge">React</span>
                     <span class="tech-badge">Node.js</span>
                     <span class="tech-badge">Chart.js</span>
-                    <span class="tech-badge">MongoDB</span>
                 </div>
             </div>
-            <div class="card" style="--index:2;">
+
+            <!-- Carte 3 -->
+            <div class="card" data-modal="ppe3" style="cursor: pointer; --index:2;">
                 <div class="card-icon">🌐</div>
                 <h3>Site vitrine pour une association</h3>
                 <div class="meta">📅 Mars – Mai 2025 · Projet personnel encadré</div>
-                <p>Refonte du site web d'une association locale avec intégration d'un système de réservation d'événements et formulaire de contact.</p>
+                <p>Refonte du site web d'une association locale avec intégration d'un système de réservation...</p>
                 <div>
                     <span class="tech-badge">WordPress</span>
                     <span class="tech-badge">PHP</span>
                     <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">CSS</span>
                 </div>
             </div>
-            <div class="card" style="--index:3;">
+
+            <!-- Carte 4 -->
+            <div class="card" data-modal="ppe4" style="cursor: pointer; --index:3;">
                 <div class="card-icon">🤖</div>
                 <h3>Chatbot FAQ pour le lycée</h3>
                 <div class="meta">📅 Février – Avril 2025 · Projet transversal</div>
-                <p>Développement d'un assistant conversationnel basé sur un arbre décisionnel pour répondre aux questions fréquentes des étudiants.</p>
+                <p>Développement d'un assistant conversationnel basé sur un arbre décisionnel...</p>
                 <div>
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">Flask</span>
-                    <span class="tech-badge">JavaScript</span>
                     <span class="tech-badge">NLTK</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MODALES (placées à la fin du main) ========== -->
+        <div id="modal-container">
+            <!-- Modale 1 -->
+            <div class="modal" id="ppe1">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>📋 Application de gestion de bibliothèque</h2>
+                        <div class="meta">📅 Janvier – Avril 2025 · Projet scolaire</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Contexte :</strong> Le lycée souhaitait informatiser la gestion de sa bibliothèque interne. L'application devait permettre aux élèves de consulter le catalogue, de réserver des ouvrages et aux bibliothécaires de gérer les emprunts.</p>
+                        <p><strong>Réalisations :</strong></p>
+                        <ul>
+                            <li>Analyse des besoins et modélisation UML (diagrammes de cas d'utilisation, de classes).</li>
+                            <li>Base de données MySQL avec 8 tables.</li>
+                            <li>Back-end PHP procédural avec authentification.</li>
+                            <li>Front-end responsive avec Bootstrap et JavaScript.</li>
+                            <li>Back-office administrateur.</li>
+                        </ul>
+                        <p><strong>Compétences :</strong> PHP, MySQL, UML, Bootstrap, gestion de projet.</p>
+                        <div>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">UML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modale 2 -->
+            <div class="modal" id="ppe2">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>📊 Tableau de bord pour une PME</h2>
+                        <div class="meta">📅 Octobre – Décembre 2024 · En équipe</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Contexte :</strong> Une PME du bâtiment souhaitait visualiser ses ventes et chantiers.</p>
+                        <p><strong>Réalisations :</strong></p>
+                        <ul>
+                            <li>Réunions de cadrage avec le client.</li>
+                            <li>Stack MERN (MongoDB, Express, React, Node.js).</li>
+                            <li>Graphiques dynamiques avec Chart.js.</li>
+                            <li>Authentification JWT et rôles.</li>
+                            <li>Déploiement avec Docker.</li>
+                        </ul>
+                        <p><strong>Compétences :</strong> MERN, visualisation de données, Docker.</p>
+                        <div>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Chart.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modale 3 -->
+            <div class="modal" id="ppe3">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>🌐 Site vitrine pour une association</h2>
+                        <div class="meta">📅 Mars – Mai 2025 · Projet encadré</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Contexte :</strong> L'association « Les Petits Artistes » voulait un site moderne avec réservation d'ateliers.</p>
+                        <p><strong>Réalisations :</strong></p>
+                        <ul>
+                            <li>Thème WordPress personnalisé.</li>
+                            <li>Plugin de réservation sur mesure.</li>
+                            <li>Optimisation SEO et responsive.</li>
+                            <li>Formation des bénévoles.</li>
+                        </ul>
+                        <p><strong>Compétences :</strong> WordPress, PHP, JavaScript, relation client.</p>
+                        <div>
+                            <span class="tech-badge">WordPress</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modale 4 -->
+            <div class="modal" id="ppe4">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>🤖 Chatbot FAQ pour le lycée</h2>
+                        <div class="meta">📅 Février – Avril 2025 · Projet transversal</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Contexte :</strong> La vie scolaire recevait trop de questions répétitives. Un chatbot pour y répondre automatiquement.</p>
+                        <p><strong>Réalisations :</strong></p>
+                        <ul>
+                            <li>Base de connaissances FAQ.</li>
+                            <li>Arbre décisionnel avec NLTK.</li>
+                            <li>Interface Flask + JavaScript.</li>
+                            <li>Tests utilisateurs.</li>
+                        </ul>
+                        <p><strong>Compétences :</strong> Python, NLTK, Flask, NLP.</p>
+                        <div>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">NLTK</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
