@@ -516,3 +516,42 @@ body {
 .text-muted {
     color: var(--text-light);
 }
+
+/* ===== BOUTON LIEN EXTERNE ===== */
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.btn-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 140, 191, 0.35);
+}
+
+.btn-link span {
+    font-size: 1rem;
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+    background: var(--yellow-pale);
+    border: 1px solid rgba(253, 230, 138, 0.6);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    color: #6b5a2e;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 0.95rem;
+}
