@@ -27,10 +27,10 @@
         <p style="margin-bottom: 2rem; color: var(--text-light);">Stages réalisés dans le cadre du BTS SIO.</p>
         
         <div class="cards-grid">
-            <div class="card" style="--index:0;">
+            <div class="card" data-modal="stage1" style="cursor:pointer; --index:0;">
                 <div class="card-icon">🏢</div>
                 <h3>Développeur Web – Stage de 2ᵉ année</h3>
-                <div class="meta">📅 Mai – Juillet 2025 · Cholet Services, Cholet</div>
+                <div class="meta">📅 5 Janvier – 13 Février 2026 · Cholet Services, Cholet</div>
                 <p>Participation au développement d'une application interne de gestion de projets. Missions : correction de bugs, développement de nouvelles fonctionnalités (module de reporting), rédaction de documentation technique.</p>
                 <div>
                     <span class="tech-badge">PHP/Symfony</span>
@@ -39,16 +39,69 @@
                     <span class="tech-badge">Git</span>
                 </div>
             </div>
-            <div class="card" style="--index:1;">
+            <div class="card" data-modal="stage2" style="cursor:pointer; --index:1;">
                 <div class="card-icon">💻</div>
                 <h3>Développeur WEB – Stage de 1ʳᵉ année</h3>
-                <div class="meta">📅 Juin – Juillet 2024 · Familles Rurales, Bressuire</div>
+                <div class="meta">📅 16 Mai – 25 Juin 2025 · Familles Rurales, Bressuire</div>
                 <p>Assistance aux utilisateurs, maintenance du parc informatique, installation et configuration de postes de travail, participation à la migration vers Windows 11.</p>
                 <div>
                     <span class="tech-badge">Windows Server</span>
                     <span class="tech-badge">Active Directory</span>
                     <span class="tech-badge">GLPI</span>
                     <span class="tech-badge">Réseau</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container">
+            <div class="modal" id="stage1">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>🏢 Développeur Web – Stage de 2ᵉ année</h2>
+                        <div class="meta">📅 5 Janvier – 13 Février 2026 · Cholet Services, Cholet</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Améliorer l'application interne de gestion de projets par l'ajout de fonctionnalités et la correction de bugs.</p>
+                        <p><strong>Principales réalisations :</strong></p>
+                        <ul>
+                            <li>Correction de bugs sur les formulaires et le système de notifications.</li>
+                            <li>Développement d'un module de reporting pour suivre l'avancement des travaux.</li>
+                            <li>Rédaction de documentation technique et prise en main du code existant.</li>
+                        </ul>
+                        <p><strong>Outils :</strong> PHP, Symfony, MySQL, Docker, Git, VS Code.</p>
+                        <div>
+                            <span class="tech-badge">PHP/Symfony</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="stage2">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2>💻 Développeur WEB – Stage de 1ʳᵉ année</h2>
+                        <div class="meta">📅 16 Mai – 25 Juin 2025 · Familles Rurales, Bressuire</div>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Assurer le support informatique au sein de l'association et préparer la migration vers Windows 11.</p>
+                        <p><strong>Principales réalisations :</strong></p>
+                        <ul>
+                            <li>Maintenance du parc informatique et mise à jour des postes.</li>
+                            <li>Configuration de nouveaux postes et formation des utilisateurs.</li>
+                            <li>Participation à la migration vers Windows 11 et gestion des incidents dans GLPI.</li>
+                        </ul>
+                        <p><strong>Outils :</strong> Windows Server, Active Directory, GLPI, réseau, ticketing.</p>
+                        <div>
+                            <span class="tech-badge">Windows Server</span>
+                            <span class="tech-badge">Active Directory</span>
+                            <span class="tech-badge">GLPI</span>
+                            <span class="tech-badge">Réseau</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
