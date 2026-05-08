@@ -13,7 +13,7 @@
             <div class="logo">N. BERTRAND</div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Accueil</a>
-                <a href="ppe.html" class="nav-link">AP</a>
+                <a href="ppe.html" class="nav-link">Projet</a>
                 <a href="stage.html" class="nav-link active">Stage</a>
                 <a href="veille.html" class="nav-link">Veille</a>
                 <a href="certifications.html" class="nav-link">Certifications</a>
@@ -31,12 +31,12 @@
                 <div class="card-icon">🏢</div>
                 <h3>Développeur Web – Stage de 2ᵉ année</h3>
                 <div class="meta">📅 5 Janvier – 13 Février 2026 · Cholet Services, Cholet</div>
-                <p>Participation au développement d'une application interne de gestion de projets. Missions : correction de bugs, développement de nouvelles fonctionnalités (module de reporting), rédaction de documentation technique.</p>
+                <p>Refonte du site WordPress, Ajout d'une extension au site WordPress.</p>
                 <div>
-                    <span class="tech-badge">PHP/Symfony</span>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">Docker</span>
-                    <span class="tech-badge">Git</span>
+                    <span class="tech-badge">PHP/Iframe</span>
+                    <span class="tech-badge">WordPress</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">PHPMyAdmin</span>
                 </div>
             </div>
             <div class="card" data-modal="stage2" style="cursor:pointer; --index:1;">
@@ -62,19 +62,122 @@
                         <div class="meta">📅 5 Janvier – 13 Février 2026 · Cholet Services, Cholet</div>
                     </div>
                     <div class="modal-body">
-                        <p><strong>Objectif :</strong> Améliorer l'application interne de gestion de projets par l'ajout de fonctionnalités et la correction de bugs.</p>
+                        <p><strong>Objectif :</strong>Je travaille sur la refonte d’un site wordpress, dans lequel certains problèmes 
+                            esthétiques doivent être corrigés, et je dois ajouter des fonctionnalités liées à une connexion utilisateur 
+                            ainsi qu'implémenter des fonctionnalités pour chaque type d’utilisateurs.</p>
                         <p><strong>Principales réalisations :</strong></p>
                         <ul>
-                            <li>Correction de bugs sur les formulaires et le système de notifications.</li>
-                            <li>Développement d'un module de reporting pour suivre l'avancement des travaux.</li>
-                            <li>Rédaction de documentation technique et prise en main du code existant.</li>
+                            <li>Correction des pages du site liées à de mauvaises couleurs, typographie.</li>
+                            <li>Développement d'une extension au site WordPress comprenant une connexion utilisateur.</li>
+                            <li>Implantation d'iframe dans le site WordPress.</li>
+                            <li>Ajout de tables dans la base de données.</li>
                         </ul>
-                        <p><strong>Outils :</strong> PHP, Symfony, MySQL, Docker, Git, VS Code.</p>
+                        <p><strong>Rendu extension site WordPress (Gestionnaire) :</strong></p>
+                        <img src="images/Stage2/Accueil_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Le site web à donc été fait sur WordPress, voici la page d'accueil du côté gestionnaire (à savoir 
+                                CholetServices eux mêmes). Le tableau que l'on peut voir est un iframe que j'ai implenté sur le site. On
+                                peut y voir un système de CRUD (Create, Read, Update, Delete), mais aussi un système de filtrage avec 
+                                les cases "Lu" et "Non lu", et avec la barre de recherche.
+                            </li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Gestion_Client_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Menu_Client_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Voici la page Gestion des Clients du côté gestionnaire. Sur cette page on peut voir tous les clients
+                                qui ont été créé. Il existe un endroit ou l'on peut voir tous les salariés aussi, la page ressemble 
+                                exactement à celle-ci. Si on appuie sur un client, un petit menu va s'afficher dans lequel on pourra 
+                                choisir de "Voir le profil", "Assigner à un salarié" ou de "Fermer".
+                            </li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Inscrire_Client_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Voici l'endroit où ajouter de nouveaux clients. C'est donc sur cette page que l'on va mettre toutes les 
+                                infos liés au compte du client. Il existe un endroit ou créer des salariés aussi, la page ressemble 
+                                exactement à celle-ci.
+                            </li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Profil_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Voici l'endroit ou le gestionnaire a accès au profil d'un client. Cette page ressemble ressemble exactement à la 
+                                page de profil du client (voir plus bas), cependant le gestionnaire a un bouton modifier dans lequel il peut 
+                                réécrire toutes les informations à sa guise, et pour modifier la partie "Tâches Habituelles", le gestionnaire a 
+                                accès à ce tableau pour sélectionner plus rapidement les tâches. La possibilité de changer le profil 
+                                existe aussi pour les salariés, cependant il n'y a que une seule cases du nom de 
+                                "Informations Complémentaires".
+                            </li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Assigner_Client_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Cette page va permettre d'assigner un client à un salarié. C'est à dire que l'on va choisir un client, 
+                                puis choisir un salarié, et ensuite on va assigner le client au salarié. Cela permettra au salarié de 
+                                suivre les demandes du client et de lui répondre plus facilement. A noter que le salarié ne peut voir 
+                                que les clients qui lui ont été assigner.
+                            </li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Blog_Gestionnaire.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Suite à la demande de notre maître de stage, j'ai créer une page de blog dans laquelle il pourra créer 
+                                des blogs à mettre à la vue de tous le monde dans le site.
+                            </li>
+                        </ul>   
+                        <p><strong>Rendu extension site WordPress (Client) :</strong></p>
+                        <img src="images/Stage2/Accueil_Client.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Envoyer_Notif_Salarie_Client.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Mes_Notifs_Client.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Voici la page d'accueil du client. Sur cette page le client peut voir les notifications que les salariés 
+                                peuvent lui envoyer, en appuyant sur le bouton "Voir", le client peut voir le message qui a été envoyé et 
+                                savoir qui lui a envoyé le message. De plus, sur cette page, le client peut lui-même envoyer des messages 
+                                à un salarié auquel il a été assigné. Le client dispose aussi d'un historique de ses messages envoyés.</li>
+                        </ul>
+                        <hr>   
+                        <img src="images/Stage2/Mon_Profil_Client.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Profil_Client2.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Sur cette page, le client va pouvoir voir son profil qui a été préalablement créé par le gestionnaire.
+                                Le client n'a pas la possibilité de changer son profil à sa guise, s'il veut le faire il devra demander 
+                                au gestionnaire, à savoir CholetService, de modifier son profil.
+                            </li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Echange_CholetService_Client.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Sur cette page le client pourra communiquer avec CholetService directement, cela permet d'éviter d'envoyer
+                                directement un mail à l'entreprise. Le gestionnaire verra le message dans sa page d'accueil préalablement 
+                                montrer plus haut.
+                            </li>
+                        </ul>
+                        <p><strong>Rendu extension site WordPress (Salarié) :</strong></p>
+                        <img src="images/Stage2/Accueil_Salarie.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Envoyer_Notif_Client_Salarie.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Mes_Notifs_Salarie.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Voici la page d'accueil du salarié. Sur cette page le salarié peut voir les notifications que les clients 
+                                peuvent lui envoyer, en appuyant sur le bouton "Voir", le salarié peut voir le message qui a été envoyé et 
+                                savoir qui lui a envoyé le message. De plus, sur cette page, le salarié peut lui-même envoyer des messages 
+                                à un client qu'on lui a assigné. Le salarié dispose aussi d'un historique de ses messages envoyés.</li>
+                        </ul>
+                        <hr>
+                        <img src="images/Stage2/Mes_Clients_Salarie.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <img src="images/Stage2/Menu_Mes_Clients_Salarié.png" alt="Diagramme" style="max-width:100%; height:auto;">
+                        <ul>
+                            <li>Sur cette page le salarié peut voir tous les clients qui lui ont été assigné par le gestionnaire, cela 
+                                lui permet de voir le profil de ses clients et de connaître leur besoins. Si on appuie sur un client, 
+                                un petit menu va s'afficher dans lequel on pourra choisir de "Voir le profil" ou de "Fermer".
+                            </li>
+                        </ul>        
+                        <p><strong>Outils :</strong> PHP, WordPress, Git, PHPMyAdmin.</p>
                         <div>
-                            <span class="tech-badge">PHP/Symfony</span>
-                            <span class="tech-badge">MySQL</span>
-                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">WordPress</span>
                             <span class="tech-badge">Git</span>
+                            <span class="tech-badge">PHPMyAdmin</span>
                         </div>
                     </div>
                 </div>
