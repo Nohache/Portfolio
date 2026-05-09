@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ---- Effet de survol subtil sur les liens de navigation ----
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
+    const navLinkItems = document.querySelectorAll('.nav-link');
+    navLinkItems.forEach(link => {
         link.addEventListener('mouseenter', () => {
             if (!link.classList.contains('active')) {
                 link.style.transform = 'translateY(-2px)';
@@ -44,6 +44,34 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = 'var(--shadow)';
         }
     });
+
+    // ---- Menu hamburger ----
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-links');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation();
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Fermer le menu quand on clique en dehors
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
 
     // ============ GESTION DES MODALES (PPE) ============
     const modalTriggers = document.querySelectorAll('[data-modal]');
